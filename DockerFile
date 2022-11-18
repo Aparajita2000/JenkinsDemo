@@ -1,15 +1,5 @@
 FROM openjdk:11
-
-RUN mkdir /app
-
-COPY . /app
-
-WORKDIR /app
-
-CMD Hello
-
-EXPOSE 8080
-
+COPY . src/java
+WORKDIR /src/java
 RUN ["javac","Hello.java"]
-
 ENTRYPOINT ["java","Hello"]
