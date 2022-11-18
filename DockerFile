@@ -1,5 +1,5 @@
 FROM openjdk:11
-COPY . src/java
-WORKDIR /src/java
-RUN ["javac","Hello.java"]
-ENTRYPOINT ["java","Hello"]
+COPY . /tmp
+WORKDIR /tmp
+RUN ["javac", "Hello.java"]
+ENTRYPOINT ["java", "Hello"]
